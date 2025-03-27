@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocate Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Search Bar -->
+    <div class="max-w-3xl mx-auto mt-10 p-4">
+        <input type="text" id="search-bar" placeholder="Search advocate categories..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+    </div>
+
+    <!-- Categories Section -->
+    <div class="max-w-3xl mx-auto mt-5 grid grid-cols-2 sm:grid-cols-3 gap-4 p-4">
+        <!-- Buttons for 20 Categories -->
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Criminal Law')">Criminal Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Corporate Law')">Corporate Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Family Law')">Family Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Labor Law')">Labor Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Tax Law')">Tax Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Environmental Law')">Environmental Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('IP Law')">Intellectual Property Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Immigration Law')">Immigration Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Real Estate Law')">Real Estate Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Civil Rights Law')">Civil Rights Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Consumer Protection')">Consumer Protection</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Banking Law')">Banking Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Insurance Law')">Insurance Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Healthcare Law')">Healthcare Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Education Law')">Education Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Construction Law')">Construction Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Energy Law')">Energy Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Sports Law')">Sports Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Transportation Law')">Transportation Law</button>
+        <button class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-400 " onclick="showAdvocates('Cyber Law')">Cyber Law</button>
+    </div>
+
+    <!-- Advocate List Section -->
+    <div id="advocate-list" class="max-w-3xl mx-auto mt-10 p-4 space-y-6">
+        <!-- Advocate Item (sample) -->
+        <!-- This section will be populated dynamically based on selected category or search query -->
+    </div>
+
+    <script>
+        const advocatesData = {
+            "Criminal Law": [
+                { name: "John Doe", age: 45, region: "New York", casesWon: 150, casesPending: 5, review: 4.7 },
+                { name: "Jane Smith", age: 39, region: "California", casesWon: 98, casesPending: 8, review: 4.5 },
+                { name: "X Doe", age: 45, region: "New York", casesWon: 150, casesPending: 5, review: 4.7 },
+                { name: "Y Smith", age: 39, region: "California", casesWon: 98, casesPending: 8, review: 4.5 },
+                { name: "Z Doe", age: 45, region: "New York", casesWon: 150, casesPending: 5, review: 4.7 },
+                { name: "A Smith", age: 39, region: "California", casesWon: 98, casesPending: 8, review: 4.5 },
+                { name: "B Doe", age: 45, region: "New York", casesWon: 150, casesPending: 5, review: 4.7 },
+                { name: "D Smith", age: 39, region: "California", casesWon: 98, casesPending: 8, review: 4.5 },
+                // Add 8 more advocates here
+            ],
+            "Corporate Law": [
+                { name: "Alice Johnson", age: 50, region: "Texas", casesWon: 120, casesPending: 2, review: 4.9 },
+                { name: "Bob Brown", age: 42, region: "Florida", casesWon: 110, casesPending: 6, review: 4.6 },
+                { name: "Ali Johnson", age: 50, region: "Texas", casesWon: 120, casesPending: 2, review: 4.9 },
+                { name: "Boc Brown", age: 42, region: "Florida", casesWon: 110, casesPending: 6, review: 4.6 },
+                { name: "Abb Johnson", age: 50, region: "Texas", casesWon: 120, casesPending: 2, review: 4.9 },
+                { name: "roc Brown", age: 42, region: "Florida", casesWon: 110, casesPending: 6, review: 4.6 },
+                { name: "ram Johnson", age: 50, region: "Texas", casesWon: 120, casesPending: 2, review: 4.9 },
+                { name: "sita Brown", age: 42, region: "Florida", casesWon: 110, casesPending: 6, review: 4.6 },
+                { name: "arhu Johnson", age: 50, region: "Texas", casesWon: 120, casesPending: 2, review: 4.9 },
+                { name: "Bo Brown", age: 42, region: "Florida", casesWon: 110, casesPending: 6, review: 4.6 },
+                // Add 8 more advocates here
+            ],
+            "Family Law": [
+                { name: "Emily Davis", age: 38, region: "Nevada", casesWon: 70, casesPending: 3, review: 4.8 },
+                { name: "Daniel Lee", age: 44, region: "Arizona", casesWon: 85, casesPending: 7, review: 4.7 },
+                { name: "Emi Davis", age: 38, region: "Nevada", casesWon: 70, casesPending: 3, review: 4.8 },
+                { name: "Dani Lee", age: 44, region: "Arizona", casesWon: 85, casesPending: 7, review: 4.7 },
+                { name: "Emil Davis", age: 38, region: "Nevada", casesWon: 70, casesPending: 3, review: 4.8 },
+                { name: "Dan Lee", age: 44, region: "Arizona", casesWon: 85, casesPending: 7, review: 4.7 },
+                { name: "Emil Davis", age: 38, region: "Nevada", casesWon: 70, casesPending: 3, review: 4.8 },
+                { name: "Danie Lee", age: 44, region: "Arizona", casesWon: 85, casesPending: 7, review: 4.7 },
+                { name: "Em Davis", age: 38, region: "Nevada", casesWon: 70, casesPending: 3, review: 4.8 },
+                { name: "Da Lee", age: 44, region: "Arizona", casesWon: 85, casesPending: 7, review: 4.7 },
+                // Add 8 more advocates here
+            ],
+            // Repeat for remaining categories with 10 advocates each
+            "Cyber Law": [
+                { name: "Ryan Lopez", age: 46, region: "Denver", casesWon: 80, casesPending: 2, review: 4.9 },
+                { name: "Rachel Kim", age: 40, region: "Boston", casesWon: 73, casesPending: 5, review: 4.6 },
+                { name: "Ryan Lopez", age: 46, region: "Denver", casesWon: 80, casesPending: 2, review: 4.9 },
+                { name: "Rachel Kim", age: 40, region: "Boston", casesWon: 73, casesPending: 5, review: 4.6 },
+                { name: "Ryan Lopez", age: 46, region: "Denver", casesWon: 80, casesPending: 2, review: 4.9 },
+                { name: "Rachel Kim", age: 40, region: "Boston", casesWon: 73, casesPending: 5, review: 4.6 },
+                { name: "Ryan Lopez", age: 46, region: "Denver", casesWon: 80, casesPending: 2, review: 4.9 },
+                { name: "Rachel Kim", age: 40, region: "Boston", casesWon: 73, casesPending: 5, review: 4.6 },
+                { name: "Ryan Lopez", age: 46, region: "Denver", casesWon: 80, casesPending: 2, review: 4.9 },
+                { name: "Rachel Kim", age: 40, region: "Boston", casesWon: 73, casesPending: 5, review: 4.6 },
+                // Add 8 more advocates here
+            ]
+        };
+
+        function showAdvocates(category) {
+            const advocateList = document.getElementById("advocate-list");
+            advocateList.innerHTML = ''; // Clear previous list
+            const advocates = advocatesData[category] || [];
+            
+            advocates.forEach(advocate => {
+                advocateList.innerHTML += `
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold">${advocate.name}</h3>
+                        <p>Age: ${advocate.age}</p>
+                        <p>Region: ${advocate.region}</p>
+                        <p>Cases Won: ${advocate.casesWon}</p>
+                        <p>Cases Pending: ${advocate.casesPending}</p>
+                        <p>Customer Review: ${advocate.review} / 5</p>
+                    </div>
+                `;
+            });
+        }
+
+        // Search functionality
+        document.getElementById("search-bar").addEventListener("input", function() {
+            const query = this.value.toLowerCase();
+            for (const category in advocatesData) {
+                if (category.toLowerCase().includes(query)) {
+                    showAdvocates(category);
+                    break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   <title>advocate</title>
+
+    <style>
+      #hero {
+        background-image: url(vecteezy_a-lawyer-and-client-in-a-meeting_1310601.jpg);
+        background-size: cover;
+         background-position-y: center; 
+        
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <section>
+      <nav class="  bg-[#000000] ">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img
+              src="./assets/image/logo.jpg" class="h-12 rounded-xl" alt="ukil Logo">
+            <span class="flex flex-col">
+              <span class="text-[#D2691E] text-2xl font-semibold whitespace-nowrap dark:text-[#D2691E]">উকিল</span>
+              <span class="text-[#51AD4C] font-semibold">Talk to Advocate</span>
+            </span>
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-[gray-400] dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-black ">
+              <li> <a href="advocate.html"class="block py-2 px-3 text-[#D2691E] rounded hover:text-[#ffff] " aria-current="page">Advocate</a></li>
+              <li><a href="http://bdlaws.minlaw.gov.bd/" class="block py-2 px-3 text-[#D2691E] rounded hover:text-[#ffff] ">Law Categories</a></li>
+              <li> <a href="legal.html" class="block py-2 px-3 text-[#D2691E] rounded hover:text-[#ffff] ">Legal Services</a></li>
+              <li><a href="contact.html"class="block py-2 px-3 text-[#D2691E] rounded hover:text-[#ffff] " >Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section id="hero" class=" mx-auto">
+      <div class="flex h-screen">
+        <div class="w-3/5 relative">
+          <span class="absolute top-32 left-20">
+            <span class="flex flex-col leading-[90px]">
+
+              <form action="./handler2.php" method="POST" class="max-w-md  mx-auto bg-[#F2EEE3]/60 p-5">
+                <p class="text-[#101010] text-center font-bold">Appoinment Form</p>
+
+
+                <div class="grid md:grid-cols-2 md:gap-6">
+                  <div class="relative z-0 w-full mb-5 group">
+                      <input type="text" name="first_name" id="first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0  peer" placeholder=" " required />
+                      <label for="first_name" class="peer-focus:font-medium absolute text-sm text-[#000000] font-bold  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#D2691E] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+                  </div>
+                  <div class="relative z-0 w-full mb-5 group">
+                      <input type="text" name="last_name" id="last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0  peer" placeholder=" " required />
+                      <label for="last_name" class="peer-focus:font-medium absolute text-sm text-[#000000] font-bold  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#D2691E]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+                  </div>
+                </div>
+
+                <div class="relative z-0 w-full mb-5 group">
+                  <input type="text" name="adv_name" id="adv_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#D2691E] peer" placeholder=" " required />
+                  <label for="adv_name" class="peer-focus:font-medium absolute text-sm text-[#000000] font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#D2691E]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Advocate Name</label>
+              </div>
+
+                  <div class="relative z-0 w-full mb-5 group">
+                      <input type="tel"  name="phone" id="phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#D2691E] peer" placeholder=" " required />
+                      <label for="phone" class="peer-focus:font-medium absolute text-sm text-[#000000] font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#D2691E]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number</label>
+                  </div>
+                  
+                  <div class="relative z-0 w-full mb-5 group">
+                    <input type="date" name="date" id="date" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#D2691E] peer" placeholder=" " required />
+                    <label for="date" class="peer-focus:font-medium absolute text-sm text-[#000000] font-bold dark:text-gray-900 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#D2691E]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Appoinment Date </label>
+                </div>
+                
+                <div class="flex justify-center pb-3">
+                <button type="submit" class="text-[#000000] bg-[#ffff] hover:bg-[#D2691E] text-sm focus:ring-4 focus:outline-none focus:ring-[#00BF62] font-bold rounded-lg w-full sm:w-auto px-9 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-[#D2691E] dark:focus:ring-blue-800">Submit</button>
+              </div>
+              </form>
+            
+            </span>
+          </span>
+         
+        </div>
+          
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="thrdpart" class=" bg-[#000000] ">
+      <div class="text-center text-5xl py-5 pt-16">
+        <span class="font-bold text-[#D2691E]"> Practice </span>
+        <span class="text-white font-semibold">Area</span>
+      </div>
+    
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-10 mx-auto">
+    
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-[#D2691E] text-white flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24 ">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                <!-- <i class="fa-solid fa-building-columns " ></i> -->
+              </svg>
+            </div>
+            <h2 class="text-gray-900 text-lg title-font font-medium">Bankruptecy Law</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a  href="banklaw.html" class="mt-3 text-[#D2691E] inline-flex items-center hover:text-[#51AD4C]"> learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-[#D2691E] text-white flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h2 class="text-gray-900 text-lg title-font font-medium">Business Law</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a href= "business law.html" class="mt-3 text-[#D2691E] inline-flex items-center hover:text-[#51AD4C]">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-[#D2691E] text-white flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+              </svg>
+            </div>
+            <h2 class="text-gray-900 text-lg title-font font-medium">Civil Rights Law</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a href="civil rights.html" class="mt-3 text-[#D2691E] inline-flex items-center hover:text-[#51AD4C]">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text-gray-600 body-font mb-10">
+  <div class="container px-5 pb-10 mx-auto">
+    
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-[#D2691E] text-white flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h2 class="text-gray-900 text-lg title-font font-medium">Commercial Law</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a class="mt-3 text-[#D2691E] inline-flex items-center hover:text-[#51AD4C]">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-[#D2691E] text-white flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h2 class="text-gray-900 text-lg title-font font-medium">Corporate Law</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a class="mt-3 text-[#D2691E] inline-flex items-center hover:text-[#51AD4C]">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-[#D2691E] text-white flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+              </svg>
+            </div>
+            <h2 class="text-gray-900 text-lg title-font font-medium">Family Law</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a class="mt-3 text-[#D2691E] inline-flex items-center hover:text-[#51AD4C]">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ </section>
+
+     <!-- our Services -->
+
+    <section id ="pictures" class="container mx-auto mt-10 items-center justify-center">
+      <p class="font-bold text-5xl text-center py-5 text-black">Our Services</p>
+      <section class="p-10">
+        <section class="p-20">
+          <div class="grid grid-cols-1 md:grid-cols-2   place-items-center justify-center">
+              <!-- First div -->
+              <div class="bg-black rounded-lg p-2 w-[600px] h-[600px] flex flex-col justify-between items-center   ">
+                  <img src="div4.jpg" alt="Placeholder Image" class="w-full h-[500px] object-cover rounded-t-md border-[15px] border-transparent hover:border-orange-600 duration-300">
+                  <h3 class="text-xl font-bold mt-4 text-white">Legal Advice</h3>
+                  <a href="legal advace.html" class="text-[#D2691E] mt-2 inline-block font-semibold hover:text-[#70e85e]">Learn More >></a>
+              </div>
+              <!-- Second div  -->
+              <div class="bg-black shadow-md rounded-lg p-4 w-[600px] h-[600px] flex flex-col justify-between items-center -mt-36  ">
+                  <img src="div2.jpg" alt="Placeholder Image" class="w-full h-[500px] object-cover rounded-t-md border-[15px] border-transparent hover:border-orange-600 duration-300">
+                  <h1 class="text-xl font-bold mt-4 text-white">Secure Data & Privacy</h1>
+                  <a href="privacy.html" class="text-[#D2691E] mt-2 inline-block font-semibold hover:text-green-400">Learn More >></a>
+              </div>
+              <!-- Third div -->
+              <div class="bg-black shadow-md rounded-lg p-4 w-[600px] h-[600px] flex flex-col justify-between items-center mt-5 ">
+                  <img src="div3.jpg" alt="Placeholder Image" class="w-full h-[500px] object-cover rounded-t-md border-[15px] border-transparent hover:border-orange-600 duration-300">
+                  <h1 class="text-xl font-bold mt-4 text-white">Advocate Profile Transparency</h1>
+                  <a href="#" class="text-[#D2691E] mt-2 inline-block font-semibold hover:text-green-400 ">Learn More >></a>
+              </div>
+              <!-- Fourth div -->
+              <div class="bg-black shadow-md rounded-lg p-2 w-[600px] h-[600px] flex flex-col justify-between items-center  -mt-32 ">
+                  <img src="div1.jpg" alt="Placeholder Image" class="w-full h-[500px] object-cover rounded-t-md border-[15px] border-transparent hover:border-orange-600 duration-300">
+                  <h1 class="text-xl font-bold mt-4 text-white">Supportive Services</h1>
+                  <a href="contact.html" class="text-[#D2691E] mt-2 inline-block font-semibold hover:text-green-400">Learn More >></a>
+              </div>
+          </div>
+      </section>
+    </section>
+    </section>
+    
+
+
+<section class="">
+      <footer class="text-white md:bg-black">
+        <div class=" px-5 py-24 flex items-center md:flex-row md:flex-nowrap flex-wrap flex-col">
+          <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <img src="./assets/image/logo.jpg"class="h-12 rounded-xl" alt="ukil Logo"a/>
+              <span class="flex flex-col">
+                <span class="text-[#D2691E] text-2xl font-semibold whitespace-nowrap ml-1" >উকিল</span >
+                <span class="text-[#51AD4C] font-semibold ml-1">Talk to Advocate </span>
+              </span>
+            </a>
+          </div>
+          <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-[#D2691E] tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li><a href="advocate.html"class="text-white hover:text-[#D2691E]">Advocate</a></li>
+                <li> <a href="law.html" class="text-white hover:text-[#D2691E]">Law Categories</a> </li>
+                <li><a href="legal.html" class="text-white hover:text-[#D2691E]">Legal Services</a> </li>
+                <li> <a class="text-white hover:text-[#D2691E]">Contact</a> </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-[#D2691E] tracking-widest text-sm mb-3">SERVICES</h2>
+              <nav class="list-none mb-10">
+                <li> <a class="text-white hover:text-[#D2691E]">Legal Advice</a></li>
+                <li><a class="text-white hover:text-[#D2691E]">Secure Data & Privacy</a></li>
+                <li> <a class="text-white hover:text-[#D2691E]">Advocate Profile Transparency</a></li>
+                <li><a class="text-white hover:text-[#D2691E]">Supportive Services</a>  </li>
+              </nav>
+            </div>
+  
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CONNECT WITH US</h2>
+              <nav class="list-none flex flex-row space-x-4 mb-10"">
+                <li>
+                  <a 
+                  href="#"
+                  class="ml-3 text-[#D2691E]  hover:text-white">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                </a>
+                </li>
+                <li>
+                  <a href="#"
+                  class="ml-3 text-[#D2691E]  hover:text-white">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                <li>
+                  <a href="#"
+                  class="ml-3 text-[#D2691E]  hover:text-white">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                      
+                    </svg>
+                  </a>       
+                </li>
+
+                <li>
+                  <a href="#"
+                  class="ml-3 text-[#D2691E] hover:text-white">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>             
+                   </li>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100">
+          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+            <p class="text-gray-500 text-sm text-center sm:text-left">© 2024 UKIL —
+              <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-[#D2691E]  ml-1" target="_blank">@UKIL
+              </a>
+          </div>
+        </div>
+      </footer>
+    </section> 
+  </body>
+</html> 

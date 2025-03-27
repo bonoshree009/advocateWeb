@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(6, 6, 6);
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    background-color:chocolate;
+    border-radius: 10px;
+}
+
+.advocate-list {
+    width: 30%;
+    border-right: 5px solid rgb(13, 13, 13);
+    padding: 20px;
+    background-color: chocolate;
+}
+
+.advocate-list h2 {
+    color:rgb(254, 253, 253);
+}
+
+.advocate-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.advocate-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+   
+}
+
+.advocate-list li:hover {
+    border-left: 4px solid rgb(2, 2, 2);
+    background-color: rgb(247, 247, 247)
+}
+
+.advocate-profile {
+    width: 60%;
+    padding: 20px;
+}
+
+.profile-content {
+    display: none;
+}
+
+.profile-content h1 {
+    color:rgb(255, 255, 255);
+}
+
+.profile-content p, .profile-content ul {
+}
+
+.profile-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-content ul li {
+    background-color: rgb(252, 252, 252);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-left: 4px solid rgb(2, 2, 2);
+}

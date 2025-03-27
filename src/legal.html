@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Service Chat Room</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 font-sans">
+
+    <!-- Header -->
+    <header class="bg-green-600 text-white text-center py-6">
+        <h1 class="text-4xl font-semibold">Legal Service Chat Room</h1>
+        <p class="text-lg mt-2">A space to discuss legal matters, ask questions, and receive guidance.</p>
+    </header>
+
+    <!-- Chat Container -->
+    <div class="max-w-4xl mx-auto p-8 mt-6 bg-white rounded-xl shadow-lg">
+        
+        <!-- Chat Messages Section -->
+        <div id="chatBox" class="overflow-y-auto h-72 p-4 mb-6 bg-gray-50 border-2 border-gray-200 rounded-lg space-y-4">
+            <!-- Chat messages will be appended here -->
+        </div>
+
+        <!-- Message Input Section -->
+        <div class="flex space-x-4">
+            <input id="username" type="text" placeholder="Enter your name" class="flex-1 p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            <input id="messageInput" type="text" placeholder="Type your message" class="flex-4 p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            <button id="sendButton" class="p-3 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Simulate chat functionality
+        const chatBox = document.getElementById('chatBox');
+        const messageInput = document.getElementById('messageInput');
+        const usernameInput = document.getElementById('username');
+        const sendButton = document.getElementById('sendButton');
+
+        sendButton.addEventListener('click', () => {
+            const username = usernameInput.value || 'Anonymous';
+            const message = messageInput.value;
+            if (message.trim() !== '') {
+                addMessageToChat(username, message);
+                messageInput.value = ''; // Clear input after sending
+            }
+        });
+
+        function addMessageToChat(username, message) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('p-3', 'bg-blue-100', 'rounded-lg', 'max-w-xs', 'self-start', 'text-sm', 'text-gray-800', 'space-x-2', 'border', 'border-gray-200');
+            messageElement.innerHTML = `<strong class="font-semibold">${username}:</strong> <span>${message}</span>`;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight; // Auto scroll to the latest message
+        }
+    </script>
+
+</body>
+</html>
